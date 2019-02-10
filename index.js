@@ -349,6 +349,7 @@ HomeSeerPlatform.prototype =
 					{
 						this.log(green("Successfully connected to ASCII Control Interface of HomeSeer. Instant Status Enabled."));
 						instantStatusEnabled = true;
+						client.write("au,jvm33@columbia.edu,James0588.");
 						// resolve(true);
 					});	
 				
