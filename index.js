@@ -356,7 +356,8 @@ HomeSeerPlatform.prototype =
 				// Next, set up an event listener to receive any change data from HomeSeer and then update HomeKit				
 				client.on('data', (data) => 
 						{
-
+this.log(green("Data is: " + data));
+if (data == "ok") { this.log(red("received an OK response"));  return};
 							var myData = new HSData(data.toString().slice(0, -2).split(","));
 							
 							//Only need to do an update if there is HomeKit data associated with it!
